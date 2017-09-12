@@ -77,16 +77,17 @@
 }
 - (void)guanliBtn:(UIButton *)sender{
     //管理评论
-    
+    [self.DGdelegate guanL:[NSString stringWithFormat:@"%ld",self.dyId] ];
 }
 - (void)deleBtn:(UIButton *)sender{
     //删除
+       [self.DGdelegate deleL:[NSString stringWithFormat:@"%ld",self.dyId] ];
     
 }
 - (void)selectDynamic:(DynamicModel *)dynamic{
     self.picAmov.image = [UIImage imageNamed:dynamic.picOrMov?@"pic":@"mov"];
     self.contentLabel.text = dynamic.content;
-    [self.iconPic sd_setImageWithURL:[NSURL URLWithString:dynamic.icon]];
+    [self.iconPic sd_setImageWithURL:[NSURL URLWithString:dynamic.icon] placeholderImage:[UIImage imageNamed:@"LoseIcon"]];
     self.nameLabel.text = dynamic.name;
     self.timeLabel.text = dynamic.time;
     self.dyId = dynamic.dyId;

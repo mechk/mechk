@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "DynamicModel.h"
+
+@protocol deleOrGuanli <NSObject>
+
+
+@required
+- (void)deleL:(NSString *)dyId;
+
+- (void)guanL:(NSString *)dyId;
+@end
 @interface MCDynamicCell : UITableViewCell
 - (void)selectDynamic:(DynamicModel *)dynamic;
+@property(nonatomic,weak)id<deleOrGuanli>DGdelegate;
 @end

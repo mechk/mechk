@@ -24,6 +24,10 @@
     backView.image = [UIImage imageNamed:@"banner"];
     [self.view addSubview:backView];
 }
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+  
+}
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
     

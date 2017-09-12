@@ -9,5 +9,5 @@
 #import "MCBaseViewController.h"
 
 @interface MCDySecViewController : MCBaseViewController
-
+@property(nonatomic,strong)NSMutableArray *dataArr;
 @end

@@ -11,4 +11,7 @@
 @interface MCBaseViewController : UIViewController
 - (void)createBack;
 - (NSString *)time:(NSString *)timeStampString;
+- (void)hideTabBar;
+- (void)showTabBar;
+- (void)backAction;
 @end

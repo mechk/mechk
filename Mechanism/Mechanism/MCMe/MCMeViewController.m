@@ -20,6 +20,9 @@
      self.view.backgroundColor = [UIColor whiteColor];
          [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
     

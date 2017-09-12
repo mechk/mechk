@@ -25,6 +25,8 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
         [self.navigationController setNavigationBarHidden:YES animated:NO];
+    
+    
 }
 - (void)initView{
     UIImageView *backView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, def_width, 350*scaleH)];
@@ -72,11 +74,12 @@
 }
 - (void)tapView:(UITapGestureRecognizer *)sender{
       [self.navigationController setNavigationBarHidden:NO animated:NO];
+  
      MCDynamicViewController *dy = [[MCDynamicViewController alloc]init];
     switch (sender.self.view.tag -9999) {
         case 0:
-            
             [self.navigationController pushViewController:dy animated:YES];
+      
             
             break;
         case 1:
